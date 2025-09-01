@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+    <link href="~/design/design.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @* <h1>Fine Wine AB</h1> *@
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer> &copy; Fine Wine AB </footer>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

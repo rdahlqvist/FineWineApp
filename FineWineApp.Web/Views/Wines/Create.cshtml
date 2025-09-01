@@ -1,0 +1,54 @@
+﻿@{
+	ViewBag.Title = "Create";
+}
+
+@model Wine
+	<h4>Add new wine</h4>
+	
+<div class="CreateForm">
+	<form asp-controller="Wines" asp-action="Create" enctype="multipart/form-data" method="post"> 
+		<label asp-for="Name"></label>
+		<span asp-validation-for="Name" style="color: red"></span>
+		<input asp-for="Name" />
+
+		<label asp-for="WineMaker"></label>
+		<span asp-validation-for="WineMaker" style="color: red"></span>
+		<input asp-for="WineMaker" />
+
+		<label asp-for="Price"></label>
+		<span asp-validation-for="Price" style="color: red"></span>
+		<input asp-for="Price" />
+
+		<label asp-for="Year"></label>
+		<span asp-validation-for="Year" style="color: red"></span>
+		<input asp-for="Year" />
+
+		<label asp-for="Country"></label>
+		<span asp-validation-for="Country" style="color: red"></span>
+		<input asp-for="Country" />
+
+		<label asp-for="AlcPercentage"></label>
+		<span asp-validation-for="AlcPercentage" style="color: red"></span>
+		<input asp-for="AlcPercentage" />
+
+		<label asp-for="Description"></label>
+		<span asp-validation-for="Description" style="color: red"></span>
+		<input asp-for="Description" />
+
+		<label asp-for="Type"></label>
+		<span asp-validation-for="Type" style="color: red"></span>
+		<input asp-for="Type" />
+
+		<label asp-for="ImageFile">Add image</label>
+		<input asp-for="ImageFile" type="file" />
+		<br />
+
+		<button type="submit">Save</button>
+	</form>
+</div>
+
+@section scripts
+{
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Info";
+}
+@model Wine
+<title>Info</title>
+
+<img src="@Url.Content("~/Images/" + Model.ImagePath)"/>
+
+
+<h1>@Model.Name</h1>
+
+<h6>Winemaker:</h6>
+    <p>@Model.WineMaker</p>
+
+<h6>Country:</h6>
+    <p>@Model.Country</p>
+
+<h6>Year:</h6>
+    <p>@Model.Year</p>
+
+<h6>DESCRIPTION:</h6>
+    <p>@Model.Description</p>
+
+
+<div>
+    <a asp-controller="Wines" asp-action="Index">
+        <button>Go back</button>
+    </a>
+</div>

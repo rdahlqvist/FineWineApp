@@ -1,0 +1,23 @@
+﻿@{
+	ViewBag.Title = "Home";
+}
+@model Wine[]
+<div class="IndexDiv">
+	<h1>Wine in stock</h1>
+		<div class="IndexList">
+			<ul>
+				@foreach (var wine in Model)
+				{
+					<li>
+						<a style="text-decoration: none" 
+							asp-controller="Wines"
+							asp-action="Info"
+							asp-route-wineId="@wine.Id">@wine.Name (@wine.Type) - @wine.Price:-</a>
+					</li>
+				}
+			</ul>
+
+			<a asp-controller="Wines" asp-action="Create">Add wine</a>
+
+		</div>
+</div>
